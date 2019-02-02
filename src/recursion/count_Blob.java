@@ -21,19 +21,30 @@ public class count_Blob {
 	public static int CNT_PIXEL = 2;
 	
 	public static void main(String[] args) {
-		countPixel(0,0);
+		countPixel(7,7);
 		System.out.println(count);
+		printImage();
+		
 	}
+	
+	public static void printImage(){
+		for(int i = 0; i<imageSize; i++){
+            for(int j = 0; j<imageSize; j++){
+                System.out.print(image[i][j]);
+            }
+            System.out.println();
+        }
+        System.out.println();
+	}
+	
 	public static boolean countPixel(int x, int y){
-		if(image[x][y] == BGD_PIXEL){
+		if(x<0 || y<0 || x>=imageSize || y>=imageSize){
 			return false;
-		}else if(x<0 || y<0 || x>=imageSize || y>=imageSize){
-			return false;
-		}else if(image[x][y] == CNT_PIXEL){
+		}else if(image[x][y] != IMAGE_PIXEL){
 			return false;
 		}else{
 			count++;
-			image[x][y]=CNT_PIXEL;
+			image[x][y] = CNT_PIXEL;
 			if(countPixel(x-1,y+1)||countPixel(x,y+1)||countPixel(x+1,y+1)||
 					countPixel(x-1,y)||countPixel(x+1,y)||countPixel(x-1,y-1)||
 					countPixel(x,y-1)||countPixel(x+1,y-1)){
