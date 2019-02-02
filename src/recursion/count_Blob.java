@@ -38,13 +38,13 @@ public class count_Blob {
 	}
 	
 	public static boolean countPixel(int x, int y){
-		if(x<0 || y<0 || x>=imageSize || y>=imageSize){
+		if(x<0 || y<0 || x>=imageSize || y>=imageSize){ //¹üÀ§¸¦ ¹þ¾î³µÀ» ¶§
 			return false;
-		}else if(image[x][y] != IMAGE_PIXEL){
+		}else if(image[x][y] != IMAGE_PIXEL){ //1ÀÌ ¾Æ´Ò ¶§
 			return false;
 		}else{
 			count++;
-			image[x][y] = CNT_PIXEL;
+			image[x][y] = CNT_PIXEL; //Áö³ª°¬À½À» Ç¥½Ã
 			if(countPixel(x-1,y+1)||countPixel(x,y+1)||countPixel(x+1,y+1)||
 					countPixel(x-1,y)||countPixel(x+1,y)||countPixel(x-1,y-1)||
 					countPixel(x,y-1)||countPixel(x+1,y-1)){
