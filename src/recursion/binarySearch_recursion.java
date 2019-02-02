@@ -1,4 +1,4 @@
-package practice_java;
+package recursion;
 
 public class binarySearch_recursion {
     public static int [][] maze = {
@@ -32,19 +32,19 @@ public class binarySearch_recursion {
 	}
 
     public static boolean findMaze(int x, int y){ //true or false ë¬¸ì œ
-        if(x>=mazeSize || y >= mazeSize || x<0 || y<0){ //ë²”ìœ„ ë°–ì¼ ë•Œ
+        if(x>=mazeSize || y >= mazeSize || x<0 || y<0){ //ë²”ìœ„ ë°–ì¼ ?•Œ
             return false;
-        }else if(maze[x][y]!=PHATH){ //ë²½ì´ê±°ë‚˜, ì§€ë‚˜ì˜¨ ê¸¸ì¼ë•Œ ì¦‰, ê¸¸ì´ ì•„ë‹ ë•Œ
+        }else if(maze[x][y]!=PHATH){ //ë²½ì´ê±°ë‚˜, ì§??‚˜?˜¨ ê¸¸ì¼?•Œ ì¦?, ê¸¸ì´ ?•„?‹ ?•Œ
             return false;
-        }else if(x==mazeSize-1&&y==mazeSize-1){ //ì¶œêµ¬ì— ë„ë‹¬í–ˆì„ ë•Œ
+        }else if(x==mazeSize-1&&y==mazeSize-1){ //ì¶œêµ¬?— ?„?‹¬?–ˆ?„ ?•Œ
         	maze[x][y]=PASSED;
         	return true;
-        }else{ //ì•„ì§ ê°€ë³¸ì  ì—†ëŠ” ëš«ë ¤ìžˆëŠ” ê¸¸ì¼ ë–„
-            maze[x][y] = PASSED; //ê°€ë³¸ ê¸¸ì´ë¼ê³  í‘œì‹œ
-            /////////////////ë„¤ ì…€ì˜ ê²°ê³¼ê°€ ëª¨ë‘ ë‚˜ì˜¤ê¸° ì „ê¹Œì§€ëŠ” ì—¬ê¸°ê¹Œì§€ í•¨///////////////////
+        }else{ //?•„ì§? ê°?ë³¸ì  ?—†?Š” ?š«? ¤?žˆ?Š” ê¸¸ì¼ ?–„
+            maze[x][y] = PASSED; //ê°?ë³? ê¸¸ì´?¼ê³? ?‘œ?‹œ
+            /////////////////?„¤ ???˜ ê²°ê³¼ê°? ëª¨ë‘ ?‚˜?˜¤ê¸? ? „ê¹Œì??Š” ?—¬ê¸°ê¹Œì§? ?•¨///////////////////
             
-            if(findMaze(x-1, y) || findMaze(x, y-1) || findMaze(x+1, y) || findMaze(x, y+1)){ //ì£¼ë³€ ì…€ë“¤ë„ í™•ì¸
-                return true; //ì£¼ë³€ ì…€ë“¤ì˜ í™•ì¸ì´ ëª¨ë‘ ëë‚˜ì•¼ ì—¬ê¸°ë¡œ ì˜´
+            if(findMaze(x-1, y) || findMaze(x, y-1) || findMaze(x+1, y) || findMaze(x, y+1)){ //ì£¼ë? ???“¤?„ ?™•?¸
+                return true; //ì£¼ë? ???“¤?˜ ?™•?¸?´ ëª¨ë‘ ??‚˜?•¼ ?—¬ê¸°ë¡œ ?˜´
             }
             maze[x][y]=WRORRNG;
             return false;

@@ -1,4 +1,4 @@
-package practice_java;
+package recursion;
 
 public class findMax {
 
