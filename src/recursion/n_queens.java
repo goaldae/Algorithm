@@ -1,13 +1,11 @@
 package recursion;
 
 public class n_queens {
-	public static int N = 5;
+	public static int N = 20;
 	public static int[] chess = new int[N];
 	
 	public static void main(String[] args) {
 		queens(0);
-		
-		
 	}
 	
 	public static boolean promising(int level){ 
