@@ -1,6 +1,6 @@
 package recursion;
 
-public class binarySearch_recursion {
+public class binary_search {
     public static int [][] maze = {
         {0,1,0,1,1},
         {0,1,0,0,0},

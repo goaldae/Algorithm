@@ -1,6 +1,6 @@
 package recursion;
 
-public class count_Blob {
+public class count_blob {
 	public static int [][] image = {
 			{1,0,0,0,0,0,0,1},
 			{0,1,1,0,0,1,0,0},
