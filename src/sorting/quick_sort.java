@@ -10,6 +10,7 @@ public class quick_sort {
 		
 		ob.quickSort(data, 0, n-1);
 		ob.printData(data, n);
+		
 	}
 	
 	public void printData(int[] data, int n){
@@ -17,7 +18,6 @@ public class quick_sort {
 			System.out.printf("%d ", data[i]);
 		}
 	}
-	
 	public void quickSort(int[] data, int p, int r){
 		int temp;
 		int i = p-1;
