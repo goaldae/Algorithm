@@ -3,7 +3,7 @@ package bst;
 public class Test {
     public static void main(String[] args) {
         BinarySearchTree bst = new BinarySearchTree();
-        
+
         bst.insertBST('G');
         bst.insertBST('I');
         bst.insertBST('H');
