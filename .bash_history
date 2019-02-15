@@ -105,3 +105,17 @@ git status
 git commit -am "Make map function"
 git status
 git status
+cd ~
+ls
+git status
+git commit -am "BST modify"
+cd ..
+ls
+cd practice_js
+git status
+git commit -am "Practice map function"
+git push
+cd ..
+ls
+cd Algorithm
+git push
