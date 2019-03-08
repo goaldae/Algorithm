@@ -6,7 +6,14 @@ import java.util.*;
 
 
 public class p0308 {
-
+	int a;
+	p0308(int a){
+		System.out.println("hlel");
+		this.a = a;
+	}
+	static void test(){
+		System.out.println("hlel");
+	}
 	public static void main(String[] args) throws IOException {
 		ArrayList alist = new ArrayList();
 		 alist.add(1);
@@ -49,6 +56,10 @@ public class p0308 {
 		
 		StringTokenizer st = new StringTokenizer(t, " ");
 		System.out.println(st.nextToken()+st.nextToken());
+		
+		p0308 w = new p0308(10);
+		System.out.println(w.a);
+		
 	}
 
 }

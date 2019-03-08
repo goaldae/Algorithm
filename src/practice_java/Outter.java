@@ -23,4 +23,7 @@ public class Outter {
 			System.out.println("Inner");
 		}
 	}
+	static void test1(){
+		System.out.println("hl11el");
+	}
 }

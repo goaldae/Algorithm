@@ -119,3 +119,91 @@ cd ..
 ls
 cd Algorithm
 git push
+cd ~
+ls
+cd ..
+ls
+cd practice_js
+ls
+git status
+git commit -am "Filter function"
+cd ../Algorithm
+git status
+git commit -am "Modify BST"
+git push
+cd ..
+ls
+cd practice_js
+ls
+git push
+ls
+git status
+git commit -am "Map, Filter, reduce examples"
+git status
+git push
+cd ~/../practice_js
+git status
+git log
+git commit -am "Make curry function"
+git push
+cd ~/../practice_js
+ls
+git status
+git commit -am "Make function using fncs"
+git push
+git status
+git log
+cd ~/../practice_js
+git status
+git commit -am "Practice curry function"
+git push
+cd ~/../practice_js
+git status
+git log
+git commit -am "Practice curry"
+git push
+cd ~/../practice_js
+git status
+git commit -am "Make table using function"
+git push
+cd ~/../practice_js
+git status
+git add range.js
+git status
+git commit -am "Practice range, L.range"
+git pusb
+git push
+cd ~/../practice_js
+git status
+git commit -am "Make take function"
+git push
+cd ~/../practice_js
+git status
+git commit -am "Make L.filter, L.map function"
+git push
+cd ~/../practice_js
+git status
+git commit -am "Make queryStr function"
+git push
+cd ~/../practice_js
+git status
+git commit -am "Make find function"
+git push
+cd ~/../practice_js
+git status
+git commit -am 
+git commit -am "Make L.flatten function"
+git push
+git log
+cd ~/../practice_js
+git status
+git commit -am "Make L.deepFlat function"
+git push
+cd ~/../practice_js
+git status
+git commit -am "Make L.flatMap function (not yet)"
+git push
+cd ~/../practice_js
+git status
+git commit -am "Handdle square Array"
+git push
