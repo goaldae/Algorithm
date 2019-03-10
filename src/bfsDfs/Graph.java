@@ -24,7 +24,7 @@ public class Graph {
 	}
 	
 	void bfs(int s){
-		boolean[] visited = new boolean[v];
+		boolean[] visited = new boolean[v]; //방문한지 확인하는 배열
 		Queue<Integer> queue = new LinkedList<>();
 		
 		visited[s] = true;
@@ -32,7 +32,7 @@ public class Graph {
 			
 		while(!queue.isEmpty()){
 			s = queue.poll();
-			System.out.print(s + " ");
+			System.out.print(s+1 + " ");
 			
 			Iterator<Integer> iter = a[s].listIterator();
 			while(iter.hasNext()){
