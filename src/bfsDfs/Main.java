@@ -28,6 +28,8 @@ public class Main {
 			g.addEdge(v1, v2);
 		}
 		
+		g.dfs(V);
+		System.out.println();
 		g.bfs(V);
 		
 		/*
@@ -43,9 +45,6 @@ public class Main {
 		g.addEdge(6, 7);
 		g.addEdge(6, 8);
 		g.addEdge(7, 8);
-		*/
-		
+		*/	
 	}
-
-	
 }

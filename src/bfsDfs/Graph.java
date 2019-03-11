@@ -45,4 +45,24 @@ public class Graph {
 		}
 		
 	}
+	
+	void dfs(int s){
+		boolean[] visited = new boolean[v];
+		dfsUtil(s, visited);
+	}
+	
+	void dfsUtil(int s, boolean[] visited){
+		visited[s] = true;
+		System.out.print(s+1 + " ");
+		
+		Iterator<Integer> iter = a[s].listIterator();
+		
+		while(iter.hasNext()){
+			int n = iter.next();
+			
+			if(!visited[n]){
+				dfsUtil(n, visited);
+			}
+		}
+	}
 }
