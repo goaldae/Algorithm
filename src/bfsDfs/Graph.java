@@ -34,14 +34,21 @@ public class Graph {
 			s = queue.poll();
 			System.out.print(s+1 + " ");
 			
-			Iterator<Integer> iter = a[s].listIterator();
-			while(iter.hasNext()){
-				int n = iter.next();
-				if(!visited[n]){
-					visited[n] = true;
-					queue.add(n);
+			//Iterator<Integer> iter = a[s].listIterator();
+			/*while(iter.hasNext()){
+			int n = iter.next();
+			if(!visited[n]){
+				visited[n] = true;
+				queue.add(n);
+			}
+		}*/
+			for(int i = 0; i < a[s].size(); i++){
+				if(!visited[a[s].get(i)]){
+					visited[a[s].get(i)] = true;
+					queue.add(a[s].get(i));
 				}
 			}
+			
 		}
 		
 	}

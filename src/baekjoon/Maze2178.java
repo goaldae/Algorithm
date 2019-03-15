@@ -42,7 +42,6 @@ public class Maze2178 {
 					queue.add(d[(td.x)-1][td.y]);
 					
 					d[(td.x)-1][td.y].total += d[td.x][td.y].total;
-					
 				}
 			}if(td.x >= 0 && td.x < m && (td.y)+1>=0 && (td.y)+1<n ){
 				if(d[td.x][(td.y)+1].c == false&&matrix[td.x][(td.y)+1]==1){
@@ -66,8 +65,8 @@ public class Maze2178 {
 					d[td.x][(td.y)-1].total += d[td.x][td.y].total;
 				}
 			}
-			
 		}
+		
 		System.out.println(d[m-1][n-1].total);
 		for(int i = 0; i < m; i++){
 			for(int j = 0; j < n; j++){
@@ -98,9 +97,6 @@ public class Maze2178 {
 			}
 		}	
 		
-
-		dfs(m, n, 0, 0, matrix);
-		
-		
+		dfs(m, n, 0, 0, matrix);	
 	}
 }
