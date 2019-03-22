@@ -1,3 +1,15 @@
+/*
+5 7
+WLLWWWL
+LLLWLLL
+LWLWLWW
+LWLWLLL
+WLLWLWW
+
+166984KB
+ */
+//누적합(최소 거리) 구할 때 숫자 배열 사용하기
+//String => char배열 : toCharArray
 package baekjoon;
 
 import java.util.*;
@@ -15,39 +27,46 @@ class Dot2{
 
 public class P2589 {
 	static int m, n;
-	static String[][] matrix;
-	static boolean[][] visited;
-	static Queue<Dot2> queue = new LinkedList<>();
-	static int count;
+	static char[][] matrix;
+	static int res = 0;
 	
+	static Queue<Dot2> queue = new LinkedList<>();
+		
 	static int[][] direct = {
 			{-1, 0, 1, 0},
 			{0, 1, 0, -1},
 		};
 	
-	public void bfs(int x, int y){
-		count = 0;
+	static void bfs(int x, int y){
+		boolean[][] visited = new boolean[m][n];
+		
+		int[][] distance = new int[m][n];
+		
 		queue.add(new Dot2(x, y));
-		count++;
 		visited[x][y] = true;
+		distance[x][y] = 0;
 		
 		Dot2 d;
 		while(!queue.isEmpty()){
 			d = queue.poll();
-		
+			
 			for(int i = 0; i < 4; i++){
 				int posX = d.x + direct[0][i];
-				int posY = d.y + direct[i][0];
+				int posY = d.y + direct[1][i];
 				if(posX < 0 || posY < 0 || posX >= m || posY >= n){
 					continue;
 				}
-				if(!visited[posX][posY] && matrix[posX][posY] == "L" ){
+				if(!visited[posX][posY] && matrix[posX][posY] == 'L' ){
 					queue.add(new Dot2(posX, posY));
-					count++;
+
 					visited[posX][posY] = true;
+					distance[posX][posY] = distance[d.x][d.y] + 1;
+
+					if(distance[posX][posY]>res){
+						res = distance[posX][posY];
+					}
 				}
 			}
-			
 		}
 	}
 
@@ -60,24 +79,22 @@ public class P2589 {
 		m = Integer.parseInt(st.nextToken());
 		n = Integer.parseInt(st.nextToken());
 		
-		matrix = new String[m][n];
-		visited = new boolean[m][n];
+		matrix = new char[m][n];
 		
 		for(int i = 0; i < m; i++){
 			String tempInput = br.readLine();
-			for(int j = 0; j<n; j++){
-				matrix[i][j] = tempInput.substring(j, j+1);
-			}
+			matrix[i] = tempInput.toCharArray();
 		}
 		
 		for(int i = 0; i < m; i++){
 			for(int j = 0; j<n; j++){
-				if(matrix[i][j]== "L" && !visited[i][j]){
+				if(matrix[i][j]== 'L'){
 					bfs(i, j);
 				}
 			}
 		}
-				
+			
+		System.out.println(res);
 	}
 
 }
