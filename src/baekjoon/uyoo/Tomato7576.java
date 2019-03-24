@@ -28,7 +28,7 @@ public class Tomato7576 {
 
     static int day = 0;
 
-    //토마토 중에 익지 않은 토마토, 즉 마킹이 안된 토마토가 존재하면 -> -1
+    //토마토 중에 익지 않은 토마토이면서 마킹이 안된 토마토가 존재하면 -> -1
     private static void deterMinimumDay() {
         for(int i=0; i<n; i++){
             for(int j=0; j<m; j++){
