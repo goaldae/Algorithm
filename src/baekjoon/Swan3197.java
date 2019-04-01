@@ -20,10 +20,13 @@ public class Swan3197 {
 			{0, 1, 0, -1}};
 	
 	static boolean res = false;
+	static Queue<Pos> queue = new LinkedList<>();
+	static boolean[][] checked;
+	static Pos tempPos;
+	
 	
 	static void melt(){
-		Queue<Pos> queue = new LinkedList<>();
-		
+		Queue<Pos> que = new LinkedList<>();
 		for(int i = 0; i < m; i++){
 			for(int j = 0; j < n; j++){
 				if(arr[i][j]=='L')continue; //백조면 생략
@@ -33,28 +36,21 @@ public class Swan3197 {
 							i+direct[0][k]<0||j+direct[1][k]<0) continue; //범위를 넘어서면 생략
 					
 					if(arr[i+direct[0][k]][j+direct[1][k]]=='.'){ //인접한 곳이 물이면
-						queue.add(new Pos(i, j)); //큐에 넣는다
+						que.add(new Pos(i, j)); //큐에 넣는다
 						break; //하나라도 물이면 큐에 넣고 반복문 빠져나오기
 					}
 				}
 			}
 		}
 		
-		Pos tempPos;
-		while(!queue.isEmpty()){
-			tempPos = queue.poll();
-			arr[tempPos.x][tempPos.y] = '.';
+		Pos tempP;
+		while(!que.isEmpty()){
+			tempP = que.poll();
+			arr[tempP.x][tempP.y] = '.';
 		}
 	}
 	
-	static void touchSwan(int x, int y){
-		Queue<Pos> queue = new LinkedList<>();
-		boolean[][] checked = new boolean[m][n];
-		
-		queue.add(new Pos(x, y));
-		checked[x][y] = true;
-		
-		Pos tempPos;
+	static void touchSwan(){
 		while(!queue.isEmpty()){
 			tempPos = queue.poll();
 			
@@ -65,7 +61,7 @@ public class Swan3197 {
 				if(arr[newM][newN] != 'X'&& !checked[newM][newN]){
 					queue.add(new Pos(newM, newN));
 					checked[newM][newN] = true;
-
+					
 					if(arr[newM][newN] == 'L') {
 						res = true; //만날 수 있다
 						arr[newM][newN] = 'P';
@@ -73,16 +69,18 @@ public class Swan3197 {
 						return;
 					}
 				}
-				
 			}
+			
 		}
+		queue.add(new Pos(tempPos.x, tempPos.y));
 	}
 	
 	static void initTouchSwan(){		
 		for(int i = 0; i < m; i++){
 			for(int j = 0; j < n; j++){
 				if(arr[i][j]=='L'){
-					touchSwan(i,j);
+					queue.add(new Pos(i, j));
+					checked[i][j] = true;
 					return;
 				}
 			}	
@@ -92,11 +90,12 @@ public class Swan3197 {
 	static int judge(){
 		int meltCount = 0;
 		initTouchSwan();
+		touchSwan();
 		
 		while(!res){
 			melt();
 			meltCount++;
-			initTouchSwan();
+			touchSwan();
 		}
 		return meltCount;
 	}
@@ -110,13 +109,13 @@ public class Swan3197 {
 		n = Integer.parseInt(st.nextToken());
 		
 		arr = new char[m][n];
+		checked = new boolean[m][n];
 		
 		for(int i = 0; i < m; i++){
 			input = br.readLine();
 			arr[i] = input.toCharArray();
 		}
 	
-		System.out.print(judge());	
+		System.out.print(judge());		
 	}
-
 }
