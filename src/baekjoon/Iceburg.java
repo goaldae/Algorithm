@@ -94,6 +94,7 @@ public class Iceburg {
             if(iceburg[tempPos.m][tempPos.n] < 0) iceburg[tempPos.m][tempPos.n] = 0;
         }
     }
+
     static boolean isAllMelt(){
         for(int i = 0; i<m; i++){
             for(int j = 0; j<n; j++){
@@ -102,7 +103,26 @@ public class Iceburg {
         }
         return true;
     }
-    public static void main(String[] args) throws IOException {
+
+    static  void judge(){
+        int meltCount = 0;
+
+        while(true){
+            findStart();
+            if(isDivided()){
+                System.out.print(meltCount);
+                break;
+            }
+            if(isAllMelt()){
+                System.out.println("0");
+                break;
+            }
+            melt();
+            meltCount++;
+        }
+    }
+
+    static void init() throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String input = br.readLine();
         StringTokenizer st = new StringTokenizer(input, " ");
@@ -120,30 +140,10 @@ public class Iceburg {
                 iceburg[i][j] = Integer.parseInt(st.nextToken());
             }
         }
+    }
 
-        int meltCount = 0;
-       while(true){
-            findStart();
-            if(isDivided()){
-                System.out.print(meltCount);
-                break;
-            }
-            if(isAllMelt()){
-                System.out.println("0");
-                break;
-            }
-            melt();
-            meltCount++;
-        }
-
-
-/*
-        for(int i = 0; i < m; i++) {
-
-            for (int j = 0; j < n; j++) {
-                System.out.print(iceburg[i][j]);
-            }
-            System.out.println();
-        }*/
+    public static void main(String[] args) throws IOException {
+        init();
+        judge();
     }
 }
