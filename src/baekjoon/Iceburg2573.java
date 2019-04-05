@@ -18,7 +18,7 @@ class Pos2 {
     }
 }
 
-public class Iceburg {
+public class Iceburg2573 {
     static  int m, n;
     static int[][] iceburg;
     static Queue<Pos2> queue = new LinkedList<>();
