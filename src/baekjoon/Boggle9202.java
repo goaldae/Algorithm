@@ -35,7 +35,6 @@ public class Boggle9202 {
             }
             if(i!=n-1)br.readLine();
         }
-
     }
 
     static boolean findWord(int i, int j, int k, int wordNum, int c) {
@@ -63,12 +62,17 @@ public class Boggle9202 {
             findNum++; //찾은 개수 올리기
             sumPoint += point; //점수합산
             if(longindex == -1) longindex = wordNum;
-            else if(words[wordNum].length>words[longindex].length) longindex = wordNum; //긴글자면 갱신
+            else if(words[wordNum].length>words[longindex].length) longindex = wordNum;//긴글자면 갱신
+            else if(words[wordNum].length == words[longindex].length){ //길이가 같을 때
+                int compare = String.valueOf(words[wordNum]).compareTo(String.valueOf(words[longindex])); //두 문자열 사전순서 비교
+                if(compare<0){ //사전 순서가 앞이면 갱신
+                    longindex = wordNum;
+                }
+            }
 
             return true;
         } else if (words[wordNum][k] == boggle[c][i][j]) { //현재 위치가 이어지는 글자일때
             //System.out.printf("%d %c %c\n", k, boggle[c][i][j], words[wordNum][k]);
-
             k++;
             if(findWord(i + direct[0][1], j + direct[1][1], k, wordNum, c)|| findWord(i + direct[0][2], j + direct[1][2], k, wordNum, c)||
                     findWord(i + direct[0][3], j + direct[1][3], k, wordNum, c)||findWord(i + direct[0][4], j + direct[1][4], k, wordNum, c)||
@@ -91,7 +95,8 @@ public class Boggle9202 {
         for(int c = 0; c<n; c++){
             while (true) {
                 while (true) {
-                    if (findWord(i, j, 0, wordsNum, c) || (i == 3 && j == 3)) {
+                    if((i == 3 && j == 3)) break;
+                    if (findWord(i, j, 0, wordsNum, c)) {
                         break;
                     }
                     j++;
@@ -114,6 +119,7 @@ public class Boggle9202 {
                     System.out.print(words[longindex][k]);
                 }
                 System.out.println(" "+findNum);
+                find = false;
             }
             sumPoint = 0;
             findNum = 0;
