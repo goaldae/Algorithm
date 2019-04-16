@@ -1,88 +1,75 @@
 package baekjoon;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.Arrays;
-import java.util.Comparator;
+import java.io.*;
+import java.util.StringTokenizer;
 
-public class Ecology4358 implements Comparator<String>{
-    @Override
-    public int compare(String o1, String o2) {
-        if (o1 == null && o2 == null) {
-            return 0;
+class Trie{
+    TrieNode root;
+
+    Trie(){
+        root = new TrieNode(' ');
+    } //루트 노드 data는 공백
+
+    void insert(String str){
+        int level;
+        char data;
+        int index;
+        TrieNode current = root;
+
+        for(level = 0; level<str.length(); level++){
+            data = str.charAt(level);
+            index = data;
+            if(current.children[index]==null) current.children[index] = new TrieNode(data);
+
+            current = current.children[index];
         }
-        if (o1 == null) {
-            return 1;
+        if(!current.isFinished){ //단어가 저장이 안되어있을 떄
+            current.word = str; //마지막 노드에 단어 전체 저장
+            current.isFinished = true; //저장 체크
         }
-        if (o2 == null) {
-            return -1;
-        }
-        return o1.compareTo(o2);
+        current.speciesNum++;
     }
-    static String[] trees;
-    static int[] treesNum;
-    static int total = 0;
 
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
-        trees = new String[1000000];
-        treesNum = new int[10000];
-
-        String input;
-        int i = 0;
-
-        while((input=br.readLine()) != null && input.length()!=0){
-            trees[i++] = input;
-        }
-        total = i;
-
-        Arrays.sort(trees);
-
-        System.out.println(trees[0]==trees[1]);
-        i=0;
-        int count = 1;
-        int j = 0;
-        while(trees[i] != null && i < total){
-            while(trees[i].compareTo(trees[i+1])==0){
-
-                count++;
-                i++;
+    void searchAll(TrieNode tempNode, int totalTree){
+        if(tempNode.isFinished){
+            System.out.print(tempNode.word+" ");
+            System.out.printf("%.4f\n", ((double)tempNode.speciesNum/totalTree)*100);
+        }else{
+            for(TrieNode temp : tempNode.children){
+                if(temp != null){
+                    searchAll(temp, totalTree);
+                }
             }
-            System.out.println(count);
-            treesNum[j] = count;
-            i++;
-            j++;
-            count = 1;
         }
+    }
+}
+class TrieNode{
+    TrieNode[] children;
+    char data;
+    boolean isFinished;
+    int speciesNum;
+    String word;
 
-        /*
-        i = 0;
-        j = 0;
-        while(trees[i] != null){
-            if(trees[i] != trees[i+1]){
-                System.out.printf("%s %.4f\n", trees[i], (double)treesNum[j]/total);
-                j++;
-                i++;
-            }
-            i++;
-        }*/
-        i = 0;
-        System.out.println(trees[0].compareTo(trees[1]));
-
-        while (trees[i]!=null){
-            System.out.println(trees[i]);
-            i++;
-        }
-
-
-
-
-
+    TrieNode(char data){
+        this.data = data;
+        children = new TrieNode[128];
+        isFinished = false;
+        speciesNum = 0;
     }
 }
 
+public class Ecology4358{
+    static int totalTree = 0;
 
+    public static void main(String[] args) throws IOException {
+        Trie tr = new Trie();
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String input;
+        while((input = br.readLine())!=null&& input.length() != 0){
+            tr.insert(input);
+            totalTree++;
+        }
 
-
+        tr.searchAll(tr.root, totalTree);
+    }
+}
