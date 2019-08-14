@@ -1,47 +1,49 @@
 package sorting;
 
+import java.util.Arrays;
+
 public class quick_sort {
-		
-	public static void main(String[] args) {
-		int[] data = {3, 4, 1, 2, 10, -9, 8, 2, 5};
-		int n = data.length;
-		
-		quick_sort ob = new quick_sort();
-		
-		ob.quickSort(data, 0, n-1);
-		ob.printData(data, n);
-		
-	}
-	
-	public void printData(int[] data, int n){
-		for(int i = 0; i<n; i++){
-			System.out.printf("%d ", data[i]);
+
+	void quickSort(int[] arr, int L, int R){
+		if(L<R){
+			int pivot = partition(arr, L, R);
+			quickSort(arr, L, pivot-1);
+			quickSort(arr, pivot+1, R);
 		}
 	}
-	public void quickSort(int[] data, int p, int r){
+
+	int partition(int[] arr, int L, int R){
+		int p = (L+R)/2;
 		int temp;
-		int i = p-1;
-		int j = p;
-		int x = r;
-		
-		if(p<r){
-			while(j<r){
-				if(data[j]<data[x]){ //피벗보다 작은 경우
-					i++;
-					temp = data[i];
-					data[i] = data[j];
-					data[j] = temp;
-					j++;
-				}else{ //피벗보다 크거나 같아도 해야하나?
-					j++;
-				}
+		while(L<R){
+			while(arr[L] < arr[p] && L < R) L++;
+			while(arr[R]>=arr[p] && L < R) R--;
+			if(L<R){
+				temp = arr[L];
+				arr[L] = arr[R];
+				arr[R] = temp;
+				if(L==p) p = R;
 			}
-			temp = data[i+1];
-			data[i+1] = data[x];
-			data[x] = temp;
-			
-			quickSort(data, p, i);
-			quickSort(data, i+2, r);
 		}
+		temp = arr[L];
+		arr[L] = arr[p];
+		arr[p] = temp;
+
+		return L;
+	}
+
+	void print(int[] arr){
+		for(int i = 0; i<arr.length; i++){
+			System.out.print(arr[i]+" ");
+		}
+	}
+
+	public static void main(String[] args) {
+		int[] arr = {3,2,5,7,10,0,20,23,41,2,5,6,7,1,3,18,94,1};
+		quick_sort Q = new quick_sort();
+		//System.out.print(arr.length);
+		Q.quickSort(arr, 0, arr.length-1);
+		Q.print(arr);
+
 	}
 }
