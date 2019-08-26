@@ -3,100 +3,55 @@ package baekjoon;
 import java.io.*;
 import java.util.*;
 
-class Dot{
-	int x;
-	int y;
-	int total;
-	boolean c;
-	
-	Dot(int x, int y){
+class Pos4{
+	int x, y, p;
+	Pos4(int x, int y, int p){
 		this.x = x;
 		this.y = y;
-		total = 1;
-		this.c = false;
+		this.p = p;
 	}
 }
-
 public class Maze2178 {
+	static int n, m;
+	static int[][] maze = new int[101][101];
+	static Queue<Pos4> queue = new LinkedList<>();
+	static boolean[][] visited = new boolean[101][101];
+	static int[][] direction = {
+			{-1, 0, 1, 0},{0, 1, 0, -1}};
 
-	static void dfs(int m, int n, int u, int v, int[][] matrix){
-		Queue<Dot> queue = new LinkedList<>();
-		
-		Dot[][] d = new Dot[m][n]; //matrix배열이 1이면 좌표를 가지는 dot 생성하는 dot배열 d
-		for(int i = 0; i < m; i++){
-			for(int j = 0; j < n; j++){
-				d[i][j] = new Dot(i, j);
+	static int bfs(int x, int y){
+		Pos4 p;
+		queue.add(new Pos4(x, y, 1));
+		visited[y][x] = true;
+		int tempX, tempY;
+		while(!queue.isEmpty()){
+			p = queue.poll();
+			if(p.x == n-1&&p.y==m-1) return p.p;
+			for(int i = 0; i<4; i++){
+				tempX = p.x+direction[0][i];
+				tempY = p.y+direction[1][i];
+				if(tempX<0 || tempY<0 || tempX>=n || tempY>=m || visited[tempY][tempX]==true ||maze[tempY][tempX] == 0) continue;
+				visited[tempY][tempX] = true;
+				queue.add(new Pos4(tempX, tempY, p.p+1));
 			}
 		}
-		
-		d[u][v].c = true;
-		queue.add(d[u][v]);
-			
-		while(!queue.isEmpty()){			
-			Dot td = queue.poll();
-			matrix[td.x][td.y] = 2;
-			
-			if((td.x)-1>=0 && (td.x)-1<m && td.y>=0 && td.y<n ){
-				if(d[(td.x)-1][td.y].c == false&&matrix[(td.x)-1][td.y]==1){
-					d[(td.x)-1][td.y].c=true;
-					queue.add(d[(td.x)-1][td.y]);
-					
-					d[(td.x)-1][td.y].total += d[td.x][td.y].total;
-				}
-			}if(td.x >= 0 && td.x < m && (td.y)+1>=0 && (td.y)+1<n ){
-				if(d[td.x][(td.y)+1].c == false&&matrix[td.x][(td.y)+1]==1){
-					d[td.x][(td.y)+1].c=true;
-					queue.add(d[td.x][(td.y)+1]);
-					d[td.x][(td.y)+1].total += d[td.x][td.y].total;
-				}
-			}
-			if((td.x)+1>=0 && (td.x)+1<m && td.y>=0 && td.y<n ){
-				if(d[(td.x)+1][td.y].c == false&&matrix[(td.x)+1][td.y]==1){
-					d[(td.x)+1][td.y].c=true;
-					queue.add(d[(td.x)+1][td.y]);
-					
-					d[(td.x)+1][td.y].total += d[td.x][td.y].total;
-				}
-			}
-			if(td.x>=0 && td.x<m && (td.y)-1>=0 && (td.y)-1<n ){
-				if(d[td.x][(td.y)-1].c == false&&matrix[td.x][(td.y)-1]==1){
-					d[td.x][(td.y)-1].c = true;
-					queue.add(d[td.x][(td.y)-1]);
-					d[td.x][(td.y)-1].total += d[td.x][td.y].total;
-				}
-			}
-		}
-		
-		System.out.println(d[m-1][n-1].total);
-		for(int i = 0; i < m; i++){
-			for(int j = 0; j < n; j++){
-				System.out.print(d[i][j].total+"|");
-			}
-			System.out.println();
-		}
+		return -1;
 	}
-
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String input = br.readLine();
 
-		
 		StringTokenizer st = new StringTokenizer(input, " ");
-		
-		int m = Integer.parseInt(st.nextToken());
-		int n = Integer.parseInt(st.nextToken());
-		
-		int[][] matrix = new int[m][n];
-		
-		String[] line = new String[n];
-		for(int i = 0; i < m; i++){
-			line[i] = br.readLine();
-			String[] t = line[i].split(""); 
-			for(int j = 0; j < n; j++){
-				matrix[i][j] = Integer.parseInt(t[j]);
+
+		m = Integer.parseInt(st.nextToken());
+		n = Integer.parseInt(st.nextToken());
+
+		for(int i = 0; i<m; i++){
+			input = br.readLine();
+			for(int j = 0; j<n; j++){
+				maze[i][j] = Character.digit(input.charAt(j), 10);
 			}
-		}	
-		
-		dfs(m, n, 0, 0, matrix);	
+		}
+		System.out.println(bfs(0,0));
 	}
 }
