@@ -27,56 +27,6 @@ int drop(int x, int map[][30]) {
 	return y;
 }
 
-void breaking(int k, pos temp, int map[][30]) {
-	int i = temp.i;
-	int j = temp.j;
-	map[i][j] = 0;
-	if (k == 0) { //서
-		for (int l = 0; l < temp.p - 1; l++) {
-			j--;
-			if (j < 0) break;
-			if (map[i][j] != 0) {
-				q.push(pos(i, j, map[i][j]));
-				map[i][j] = 0;
-			}
-		}
-	}
-	else if (k == 1) { //북
-
-		for (int l = 0; l < temp.p - 1; l++) {
-			i--;
-			if (i < 0) break;
-			if (map[i][j] != 0) {
-
-				q.push(pos(i, j, map[i][j]));
-				map[i][j] = 0;
-			}
-		}
-	}
-	else if (k == 2) { //동
-		for (int l = 0; l < temp.p - 1; l++) {
-			j++;
-			if (j >= w) break;
-			if (map[i][j] != 0) {
-
-				q.push(pos(i, j, map[i][j]));
-				map[i][j] = 0;
-			}
-		}
-	}
-	else if (k == 3) { //남
-		for (int l = 0; l < temp.p - 1; l++) {
-			i++;
-			if (i >= h) break;
-			if (map[i][j] != 0) {
-
-				q.push(pos(i, j, map[i][j]));
-				map[i][j] = 0;
-			}
-		}
-	}
-}
-
 void stick(int i, int j, int map[][30]) {
 	int temp = map[i][j];
 	map[i][j] = 0;
@@ -128,13 +78,19 @@ void bruteForce(int count) {
 			pos temp(0, 0, 0);
 			while (!q.empty()) {
 				temp = q.front();q.pop();
-
+				tempArr[temp.i][temp.j] = 0;
 				for (int i = 0; i < 4; i++) {
-					if (temp.p == 1) {
-						breaking(i, temp, tempArr);
-						break;
+					int newi = temp.i;
+					int newj = temp.j;
+					for (int l = 0; l < temp.p - 1; l++) {
+						newi += direction[1][i];
+						newj += direction[0][i];
+						if (newj < 0 || newi < 0 || newj >= w || newi >= h) break;
+						if (tempArr[newi][newj] != 0) {
+							q.push(pos(newi, newj, tempArr[newi][newj]));
+							tempArr[newi][newj] = 0;
+						}
 					}
-					breaking(i, temp, tempArr);
 				}
 			}
 			stickInit(tempArr);
