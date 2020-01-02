@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c3c2bafc-f339-4f27-b7c8-f0a84f8d59c1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../.bash_history" beforeDir="false" afterPath="$PROJECT_DIR$/../.bash_history" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/artificialIntelligence/AstarAlgorithm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/artificialIntelligence/backprop.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/artificialIntelligence/cnn_letters.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/artificialIntelligence/dataset/t10k-images-idx3-ubyte.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/artificialIntelligence/dataset/t10k-labels-idx1-ubyte.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/artificialIntelligence/dataset/train-images-idx3-ubyte.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/artificialIntelligence/dataset/train-labels-idx1-ubyte.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baekjoon/BabyShark16236.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baekjoon/BackPack12865.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baekjoon/Boggle9202.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baekjoon/BreakWall2206.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baekjoon/Cabbage1012.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baekjoon/Camping4795.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baekjoon/Coin22294.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baekjoon/DSLR9019.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baekjoon/DateCalc1476.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baekjoon/Dice14499.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baekjoon/Dwarf2309.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baekjoon/Ecology4358.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baekjoon/FamilyTree2644.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baekjoon/FineDust17144.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baekjoon/Fire5427.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baekjoon/Game2048_12100.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baekjoon/Iceburg2573.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baekjoon/Knight7562.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baekjoon/LIS11053.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baekjoon/LIS11055.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baekjoon/Laboratory14502.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baekjoon/Laboratory3_17142.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baekjoon/MakeOne1463.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baekjoon/MarbleEscape13460.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baekjoon/Maze2178.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baekjoon/Monitor15683.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baekjoon/P2589.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baekjoon/P2667.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baekjoon/Plus123_9095.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baekjoon/Population26234.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baekjoon/Quit14501.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baekjoon/Repairman1449.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baekjoon/Snake3190.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baekjoon/Square1699.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baekjoon/Sticker9465.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baekjoon/Swan3197.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baekjoon/Tetromino14500.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baekjoon/Tiling1793.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baekjoon/Tiling211727.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baekjoon/Tiling314852.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baekjoon/Tomato7576.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/baekjoon/Viewer13458.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bfsDfs/Graph.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bfsDfs/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bst/BinarySearchTree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bst/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bst/TreeNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dag/DAG.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/linkedList/LinkedList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/practice_java/.vscode/launch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/practice_java/AStar.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/practice_java/Outter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/practice_java/PracticeDFS.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/practice_java/p0130.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/practice_java/p0131.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/practice_java/p0308.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/recursion/.vscode/launch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/recursion/binary_search.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/recursion/count_blob.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/recursion/find_max.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/recursion/n_queens.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/recursion/powerset.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sorting/HeapSort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sorting/merge_sort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sorting/quick_sort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/swea/ProcessorConnect1767_fail.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training/DP/Fibonacci.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training/MatrixProduct.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/training/PrimeNumber.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trie/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trie/Trie.java" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/baekjoon/Laboratory14502.java" />
+        <option value="$PROJECT_DIR$/practice_java/p0130.java" />
+        <option value="$PROJECT_DIR$/practice_java/p0131.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="950" />
+    <option name="width" value="980" />
+    <option name="height" value="1045" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <flattenPackages ProjectPane="false" />
+      <hideEmptyPackages ProjectPane="true" />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="src" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="src" type="58d84e3e:PackageViewProjectNode" />
+              <item name="src" type="616d4139:PackageViewModuleNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="p0130" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="p0130" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="practice_java.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.p0130" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c3c2bafc-f339-4f27-b7c8-f0a84f8d59c1" name="Default Changelist" comment="" />
+      <created>1577711543038</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1577711543038</updated>
+      <workItem from="1577711546755" duration="237000" />
+      <workItem from="1577760651917" duration="854000" />
+      <workItem from="1577801563550" duration="84000" />
+      <workItem from="1577801712442" duration="120000" />
+      <workItem from="1577930985633" duration="158000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1453000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2080537" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32907802" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Maven" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Database" order="8" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/practice_java/p0130.class" />
+    <entry file="file://$PROJECT_DIR$/baekjoon/Laboratory14502.java" />
+    <entry file="file://$PROJECT_DIR$/baekjoon/Population26234.java" />
+    <entry file="file://$PROJECT_DIR$/practice_java/p0131.class" />
+    <entry file="file://$PROJECT_DIR$/practice_java/PracticeDFS.class" />
+    <entry file="file://$PROJECT_DIR$/practice_java/p0130.java" />
+    <entry file="file://$PROJECT_DIR$/practice_java/p0131.java" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
