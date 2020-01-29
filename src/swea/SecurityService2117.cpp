@@ -27,13 +27,15 @@ void bfs(int i, int j, int area) {
 	q.push({ i, j, 1});
 	visited[i][j] = true;
 	
-	while (!q.empty() && q.front().a <= area) {
+	while (!q.empty()) {
 		temp = q.front();q.pop();
 		if (map[temp.i][temp.j] == 1) count++; //꺼내봤는데 집이면
+		if (temp.a == area) continue;
 		for (int k = 0; k < 4; k++) {
 			int ni = temp.i + direction[1][k];
 			int nj = temp.j + direction[0][k];
 			if (ni >= n || nj >= n || ni < 0 || nj < 0||visited[ni][nj]) continue;
+			
 			visited[ni][nj] = true;
 			q.push({ ni, nj, temp.a + 1 });
 		}
